@@ -44,7 +44,7 @@ const Home: NextPage = () => {
     const localStorageData =
       getStateFromLocalStorage<string[]>(LOCAL_STORAGE_KEY_FAVOURITES) || [];
     updateFavourites(localStorageData);
-  });
+  }, []);
 
   // On change of favourite or filters, recalculate what data should be visible
   useEffect(() => {

@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { Repository } from "../../types/types";
 import { useFavourites } from "../../utils/favouritesContext";
+import HeartIconOutlined from "../../public/heartOutlined.svg";
+import HeartIconFilled from "../../public/heartFilled.svg";
 
 const AddToFavouriteButton = ({ id }: { id: Repository["id"] }) => {
   const [isFavourite, setIsFavourite] = useState<boolean>(false);
@@ -23,7 +25,11 @@ const AddToFavouriteButton = ({ id }: { id: Repository["id"] }) => {
           isFavourite ? "text-black" : "text-black/10 group-hover:text-black/50"
         }`}
       >
-        ♥️
+        {isFavourite ? (
+          <HeartIconFilled width={20} height={20} />
+        ) : (
+          <HeartIconOutlined width={20} height={20} />
+        )}
       </span>
     </button>
   );
