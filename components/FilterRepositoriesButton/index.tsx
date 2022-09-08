@@ -35,7 +35,7 @@ const FilterRepositoriesButton = ({ filter, setFilter }: Props) => {
       <select
         id="filter"
         name="filter"
-        className="border px-3 appearance-none min-w-[220px] h-full"
+        className="border px-3 appearance-none min-w-[220px] py-4 md:h-full"
         onChange={(e) => handleFilterChange(e)}
         value={filter}
       >
